@@ -76,3 +76,12 @@ Method: `DELETE`
 URL Arguments: `NA`
     
 Payload Format: `NA`
+
+# API Response Format
+
+{
+    "data": <Requested data>,
+    "message": <Failure or Success message>,
+    "status": <Failure or Success>,
+    "validation_code": <Status Code>
+}
