@@ -35,8 +35,11 @@ Payload Format: {'firstname': <doctor's first name>, 'lastname': <doctor's last 
 
 ## Add appointments for a doctor
 URL: `127.0.0.1/doctors/<doctor_id>/appointments`
+
 Method: `POST`
+
 URL Arguments: `NA` 
+
 Payload Format:
 {
     "patient_firstname": <patient's first name>,
