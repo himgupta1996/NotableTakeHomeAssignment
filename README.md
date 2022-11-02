@@ -90,3 +90,6 @@ Payload Format: `NA`
     "validation_code": <Status Code>
     
 }
+    
+## Run Automated test command: pytest tests/test_api.py
+(Could only add 1 testcase as of now)
