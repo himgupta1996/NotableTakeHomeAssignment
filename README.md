@@ -22,15 +22,22 @@ pipenv package (Can be installed using the command: pip install --user pipenv)
 
 ## Get a list of all doctors
 URL: `127.0.0.1/doctors`
+
 Method: `GET`
+
 URL Arguments: `NA` 
+
 Payload Format: `NA`
 
 ## Add a new doctor
 URL: `127.0.0.1/doctors`
+
 Method: `POST`
+
 URL Arguments: `NA` 
+
 Payload Format: {'firstname': <doctor's first name>, 'lastname': <doctor's last name>}
+
 (All the fields are required)
 
 ## Add appointments for a doctor
