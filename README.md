@@ -41,27 +41,31 @@ Method: `POST`
 URL Arguments: `NA` 
 
 Payload Format:
+
 {
     "patient_firstname": <patient's first name>,
     "patient_lastname": <patient's last name>,
-    "appointment_date": <appointment date in format YYYY-MM-DD>
+    "appointment_date": <appointment date in format YYYY:MM:DD>
     "appointment_time": <appointment_time in format HH:MM>
 }
+    
 (All the fields are required)
 
 ## Get appointments of a doctor on a particular date
 URL: `127.0.0.1/doctors/<doctor_id>/appointments?date=<appointment_date>`
+    
 Method: `GET`
+    
 URL Arguments: `date` 
+    
 Payload Format: `NA`
+    
 
 ## Delete existing appointments of a doctor
 URL: `127.0.0.1/doctors/<doctor_id>/appointments/<appointment_id>
+    
 Method: `DELETE`
-URL Arguments: `NA` 
+    
+URL Arguments: `NA`
+    
 Payload Format: `NA`
-
-
-# Steps to run tests:
-1. Go to the source directory and locate the tests folder.
-2. Run the command `pytest test_api.py` to start the tests and generate the test results report.
