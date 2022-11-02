@@ -60,7 +60,7 @@ def doctor_appointments(doctor_id, appointment_id = None):
 
             ## Checking the format of the appt day string
             if not validate_date(appt_date):
-                raise Exception("Argument Error: 'date' in incorrect format, should be YYYY-MM-DD")
+                raise Exception("Argument Error: 'date' in incorrect format, should be YYYY:MM:DD")
             
             query_doctor_appointments = Appointment.query.filter_by(doctor_id = doctor_id, start_date = appt_date).all()
             doctor_appointments = []
@@ -107,7 +107,7 @@ def doctor_appointments(doctor_id, appointment_id = None):
 
             ## Checking the format of the appt day string
             if not validate_date(appt_date):
-                raise Exception("Argument Error: 'date' in incoect format, should be YYYY-MM-DD")
+                raise Exception("Argument Error: 'date' in incoect format, should be YYYY:MM:DD")
 
             
             ## Get existing appointments for the given time

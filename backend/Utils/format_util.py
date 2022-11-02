@@ -1,7 +1,7 @@
 import datetime
 def validate_date(date_text):
     try:
-        valid_date = datetime.datetime.strptime(date_text, '%Y-%m-%d')
+        valid_date = datetime.datetime.strptime(date_text, '%Y:%m:%d')
         return True
     except ValueError:
         return False
