@@ -81,7 +81,10 @@ Payload Format: `NA`
 
 {
     "data": <Requested data>,
+    
     "message": <Failure or Success message>,
+    
     "status": <Failure or Success>,
+    
     "validation_code": <Status Code>
 }
