@@ -18,5 +18,6 @@ class Appointment(db.Model):
     patient_lastname = db.Column(db.String(100), nullable=False)
     start_date = db.Column(db.String(10))
     start_time = db.Column(db.String(10))
+    kind = db.Column(db.String(10))
     def __repr__(self):
         return f'<Appointment {self.id}>'

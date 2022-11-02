@@ -99,7 +99,8 @@ def doctor_appointments(doctor_id, appointment_id = None):
             patient_firstname = appt_data.get('patient_firstname')
             patient_lastname = appt_data.get('patient_lastname') 
             appt_date = appt_data.get('appointment_date') 
-            appt_time = appt_data.get('appointment_time') 
+            appt_time = appt_data.get('appointment_time')
+            kind = appt_data.get('kind')
             
             ## Checking the format of the appt time string
             if not validate_time(appt_time):
@@ -109,13 +110,16 @@ def doctor_appointments(doctor_id, appointment_id = None):
             if not validate_date(appt_date):
                 raise Exception("Argument Error: 'date' in incoect format, should be YYYY:MM:DD")
 
+            ## Checking if the kind of the appointment is correct
+            if kind != "New Patient" and kind != "Follow-up":
+                raise Exception("'kind' value incorrect, can be either 'New Patient' or 'Follow-up'")
             
             ## Get existing appointments for the given time
             query_appointments = Appointment.query.filter_by(doctor_id=doctor_id, start_date = appt_date, start_time = appt_time).all()
             if len(query_appointments)>=3:
                 raise Exception("No more appointment can be taken at this particular time for the doctor.")
 
-            new_appt = Appointment(patient_firstname = patient_firstname, patient_lastname = patient_lastname, start_date = appt_date, start_time = appt_time, doctor = doc)
+            new_appt = Appointment(patient_firstname = patient_firstname, patient_lastname = patient_lastname, start_date = appt_date, start_time = appt_time, kind = kind, doctor = doc)
             db.session.add(new_appt)
             db.session.commit()
 
