@@ -52,8 +52,9 @@ Payload Format:
 {
     "patient_firstname": <patient's first name>,
     "patient_lastname": <patient's last name>,
-    "appointment_date": <appointment date in format YYYY:MM:DD>
-    "appointment_time": <appointment_time in format HH:MM>
+    "appointment_date": <appointment date in format YYYY:MM:DD>,
+    "appointment_time": <appointment_time in format HH:MM>,
+    "kind": <kind of the appointment>
 }
     
 (All the fields are required)
