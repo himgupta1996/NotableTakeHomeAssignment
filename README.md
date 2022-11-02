@@ -80,6 +80,7 @@ Payload Format: `NA`
 # API Response Format
 
 {
+    
     "data": <Requested data>,
     
     "message": <Failure or Success message>,
@@ -87,4 +88,5 @@ Payload Format: `NA`
     "status": <Failure or Success>,
     
     "validation_code": <Status Code>
+    
 }
